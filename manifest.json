@@ -1,0 +1,17 @@
+{
+  "name": "Sổ QL HS - Quản Lý Chủ Nhiệm & Hồ Sơ Học Sinh",
+  "short_name": "Sổ QL HS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "landscape-primary",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "description": "Ứng dụng Sổ Quản lý Chủ nhiệm & Hồ sơ Học sinh Tiểu học chuẩn Thông tư 27/2020/TT-BGDĐT",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
