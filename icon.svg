@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="50%" stop-color="#1e40af" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Base Icon -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="8" />
+  
+  <!-- Book / Tablet background -->
+  <rect x="96" y="140" width="320" height="260" rx="24" fill="#ffffff" opacity="0.95" />
+  <path d="M96 164 C96 150 108 140 122 140 L256 160 L390 140 C404 140 416 150 416 164 L416 380 C416 394 404 400 390 400 L256 380 L122 400 C108 400 96 394 96 380 Z" fill="#ffffff" />
+  <line x1="256" y1="160" x2="256" y2="380" stroke="#cbd5e1" stroke-width="6" stroke-dasharray="8 6" />
+
+  <!-- Graduation Cap -->
+  <g transform="translate(136, 60)">
+    <polygon points="120,20 230,70 120,120 10,70" fill="url(#goldGrad)" />
+    <polygon points="120,120 200,84 200,125 120,160 40,125 40,84" fill="#ca8a04" />
+    <!-- Tassel -->
+    <path d="M220,75 L235,110 L232,150" fill="none" stroke="#fef08a" stroke-width="4" />
+    <circle cx="232" cy="155" r="7" fill="#facc15" />
+  </g>
+
+  <!-- Star of excellence -->
+  <path d="M256,190 L265,215 L292,215 L270,230 L278,255 L256,240 L234,255 L242,230 L220,215 L247,215 Z" fill="url(#goldGrad)" />
+
+  <!-- Badge text "SỔ QL HS" -->
+  <rect x="126" y="275" width="260" height="60" rx="16" fill="#1e3a8a" />
+  <text x="256" y="318" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="32" fill="#facc15" text-anchor="middle" letter-spacing="2">SỔ QL HS</text>
+  
+  <text x="256" y="362" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="16" fill="#0369a1" text-anchor="middle">THÔNG TƯ 27 / BGD&amp;ĐT</text>
+</svg>
