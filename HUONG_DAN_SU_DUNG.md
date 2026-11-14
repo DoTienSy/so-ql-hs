@@ -1,19 +1,26 @@
 # 🌟 SỔ QL HS - SỔ QUẢN LÝ CHỦ NHIỆM & HỒ SƠ HỌC SINH
-> **Chuẩn Thông tư 27/2020/TT-BGDĐT** • **Triển khai cố định dạng Desktop App** • **Giao diện 1 chạm** • **Chữ to, rõ ràng, sư phạm**
+> **Chuẩn Thông tư 27/2020/TT-BGDĐT** • **Đã triển khai trực tuyến trên GitHub Pages** • **Giao diện 1 chạm** • **Chữ to, rõ ràng, sư phạm**
 
 ---
 
-## 📌 CÁC ĐIỂM KHỞI CHẠY CỐ ĐỊNH "SỔ QL HS"
+## 🌐 ĐỊA CHỈ TRUY CẬP TRỰC TUYẾN (DÙNG MỌI NƠI)
 
-Ứng dụng **Sổ QL HS** đã được triển khai cố định, bạn có thể khởi chạy bằng bất kỳ cách nào dưới đây:
+- 🔗 **Link Ứng Dụng Trực Tuyến:** [https://dotiensy.github.io/so-ql-hs/](https://dotiensy.github.io/so-ql-hs/)
+- 📦 **Mã Nguồn GitHub:** [https://github.com/DoTienSy/so-ql-hs](https://github.com/DoTienSy/so-ql-hs)
 
-1. **Từ Màn hình chính (Desktop):**
-   - Nhấp đúp vào biểu tượng shortcut: **`Sổ QL HS`** trên màn hình Desktop của bạn.
-   - Ứng dụng sẽ tự động mở ở chế độ **Cửa sổ ứng dụng độc lập (App Mode)**: Không thanh địa chỉ, không tab trình duyệt, giao diện rộng rãi như một phần mềm Windows chuyên nghiệp.
+> **Mẹo hữu ích:** Thầy/Cô có thể mở link trên điện thoại hoặc máy tính bảng (iPad, Android), chọn **"Thêm vào Màn hình chính" (Add to Home Screen)** để sử dụng như một App di động thực thụ!
 
-2. **Từ thư mục ứng dụng:**
-   - Nhấp đúp vào file: **[Sổ QL HS.bat](file:///c:/Users/hi/Downloads/Sổ%20QL%20của%20GVCN%20và%20HS/Sổ%20QL%20HS.bat)** hoặc shortcut **`Sổ QL HS.lnk`**.
-   - Hoặc mở trực tiếp file [index.html](file:///c:/Users/hi/Downloads/Sổ%20QL%20của%20GVCN%20và%20HS/index.html) bằng bất kỳ trình duyệt nào.
+---
+
+## 💻 CÁC CÁCH KHỞI CHẠY TRÊN MÁY TÍNH
+
+1. **Từ Màn hình Desktop:**
+   - Nhấp đúp vào biểu tượng shortcut: **`Sổ QL HS`** trên màn hình Desktop.
+   - Ứng dụng tự động mở phiên bản trực tuyến ở chế độ **Cửa sổ phần mềm độc lập (App Mode)**: Không thanh địa chỉ, không tab trình duyệt, giao diện rộng rãi và mượt mà.
+
+2. **Từ thư mục trên máy:**
+   - Nhấp đúp vào file [Sổ QL HS.bat](file:///c:/Users/hi/Downloads/Sổ%20QL%20của%20GVCN%20và%20HS/Sổ%20QL%20HS.bat).
+   - Hoặc mở trực tiếp file nội bộ [index.html](file:///c:/Users/hi/Downloads/Sổ%20QL%20của%20GVCN%20và%20HS/index.html) khi không có kết nối mạng (chạy Offline-First).
 
 ---
 
@@ -67,7 +74,6 @@
 
 ---
 
-## 🔒 AN TOÀN & BẢO MẬT DỮ LIỆU (OFFLINE-FIRST)
-- Ứng dụng chạy hoàn toàn trên máy tính của bạn, không yêu cầu kết nối mạng Internet.
-- Dữ liệu lưu trong trình duyệt cá nhân (LocalStorage).
-- Sử dụng nút **"Sao lưu"** ở góc trên bên phải để tải file dự phòng JSON về máy, hoặc bấm **"Khôi phục"** khi muốn chuyển dữ liệu sang máy tính khác.
+## 🔒 SAO LƯU & KHÔI PHỤC DỮ LIỆU
+- Nút **"Sao lưu"** ở góc trên thanh công cụ cho phép tải file `SaoLuu_So_QL_HS_...json` về máy tính.
+- Nút **"Khôi phục"** cho phép nạp lại dữ liệu trên bất kỳ thiết bị mới nào (điện thoại, máy tính ở trường, máy ở nhà) một cách tiện lợi.
