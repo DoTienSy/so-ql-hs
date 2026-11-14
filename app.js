@@ -4,6 +4,73 @@
  * Hỗ trợ: Đa Lớp Học • Sổ Cái Cả Tháng • Tiêu Chí Tùy Biến • Ngân Hàng Nhận Xét
  */
 
+// ================= TIÊU CHÍ CHUẨN THÔNG TƯ 27 (MÔN HỌC & HOẠT ĐỘNG GD) =================
+const PRIMARY_SUBJECTS_BY_GRADE = {
+  1: [
+    { id: 'sub_tiengviet', label: 'Tiếng Việt', short: 'T.Việt', hasScore: true },
+    { id: 'sub_toan', label: 'Toán', short: 'Toán', hasScore: true },
+    { id: 'sub_tienganh', label: 'Ngoại ngữ 1 (Tiếng Anh)', short: 'N.Ngữ', hasScore: false },
+    { id: 'sub_daoduc', label: 'Đạo đức', short: 'Đ.Đức', hasScore: false },
+    { id: 'sub_tnxh', label: 'Tự nhiên & Xã hội', short: 'TN&XH', hasScore: false },
+    { id: 'sub_gdtc', label: 'GD Thể chất', short: 'Thể chất', hasScore: false },
+    { id: 'sub_amnhac', label: 'Âm nhạc', short: 'Â.Nhạc', hasScore: false },
+    { id: 'sub_mithuat', label: 'Mĩ thuật', short: 'M.Thuật', hasScore: false },
+    { id: 'sub_trainghiem', label: 'HĐ Trải nghiệm', short: 'HĐTN', hasScore: false }
+  ],
+  2: [
+    { id: 'sub_tiengviet', label: 'Tiếng Việt', short: 'T.Việt', hasScore: true },
+    { id: 'sub_toan', label: 'Toán', short: 'Toán', hasScore: true },
+    { id: 'sub_tienganh', label: 'Ngoại ngữ 1 (Tiếng Anh)', short: 'N.Ngữ', hasScore: false },
+    { id: 'sub_daoduc', label: 'Đạo đức', short: 'Đ.Đức', hasScore: false },
+    { id: 'sub_tnxh', label: 'Tự nhiên & Xã hội', short: 'TN&XH', hasScore: false },
+    { id: 'sub_gdtc', label: 'GD Thể chất', short: 'Thể chất', hasScore: false },
+    { id: 'sub_amnhac', label: 'Âm nhạc', short: 'Â.Nhạc', hasScore: false },
+    { id: 'sub_mithuat', label: 'Mĩ thuật', short: 'M.Thuật', hasScore: false },
+    { id: 'sub_trainghiem', label: 'HĐ Trải nghiệm', short: 'HĐTN', hasScore: false }
+  ],
+  3: [
+    { id: 'sub_tiengviet', label: 'Tiếng Việt', short: 'T.Việt', hasScore: true },
+    { id: 'sub_toan', label: 'Toán', short: 'Toán', hasScore: true },
+    { id: 'sub_tienganh', label: 'Ngoại ngữ 1 (Tiếng Anh)', short: 'N.Ngữ', hasScore: true },
+    { id: 'sub_daoduc', label: 'Đạo đức', short: 'Đ.Đức', hasScore: false },
+    { id: 'sub_tnxh', label: 'Tự nhiên & Xã hội', short: 'TN&XH', hasScore: false },
+    { id: 'sub_tinhoc', label: 'Tin học', short: 'Tin học', hasScore: true },
+    { id: 'sub_congnghe', label: 'Công nghệ', short: 'C.Nghệ', hasScore: true },
+    { id: 'sub_gdtc', label: 'GD Thể chất', short: 'Thể chất', hasScore: false },
+    { id: 'sub_amnhac', label: 'Âm nhạc', short: 'Â.Nhạc', hasScore: false },
+    { id: 'sub_mithuat', label: 'Mĩ thuật', short: 'M.Thuật', hasScore: false },
+    { id: 'sub_trainghiem', label: 'HĐ Trải nghiệm', short: 'HĐTN', hasScore: false }
+  ],
+  4: [
+    { id: 'sub_tiengviet', label: 'Tiếng Việt', short: 'T.Việt', hasScore: true },
+    { id: 'sub_toan', label: 'Toán', short: 'Toán', hasScore: true },
+    { id: 'sub_tienganh', label: 'Ngoại ngữ 1 (Tiếng Anh)', short: 'N.Ngữ', hasScore: true },
+    { id: 'sub_daoduc', label: 'Đạo đức', short: 'Đ.Đức', hasScore: false },
+    { id: 'sub_khoahoc', label: 'Khoa học', short: 'K.Học', hasScore: true },
+    { id: 'sub_lichsudiali', label: 'Lịch sử & Địa lí', short: 'LS&ĐL', hasScore: true },
+    { id: 'sub_tinhoc', label: 'Tin học', short: 'Tin học', hasScore: true },
+    { id: 'sub_congnghe', label: 'Công nghệ', short: 'C.Nghệ', hasScore: true },
+    { id: 'sub_gdtc', label: 'GD Thể chất', short: 'Thể chất', hasScore: false },
+    { id: 'sub_amnhac', label: 'Âm nhạc', short: 'Â.Nhạc', hasScore: false },
+    { id: 'sub_mithuat', label: 'Mĩ thuật', short: 'M.Thuật', hasScore: false },
+    { id: 'sub_trainghiem', label: 'HĐ Trải nghiệm', short: 'HĐTN', hasScore: false }
+  ],
+  5: [
+    { id: 'sub_tiengviet', label: 'Tiếng Việt', short: 'T.Việt', hasScore: true },
+    { id: 'sub_toan', label: 'Toán', short: 'Toán', hasScore: true },
+    { id: 'sub_tienganh', label: 'Ngoại ngữ 1 (Tiếng Anh)', short: 'N.Ngữ', hasScore: true },
+    { id: 'sub_daoduc', label: 'Đạo đức', short: 'Đ.Đức', hasScore: false },
+    { id: 'sub_khoahoc', label: 'Khoa học', short: 'K.Học', hasScore: true },
+    { id: 'sub_lichsudiali', label: 'Lịch sử & Địa lí', short: 'LS&ĐL', hasScore: true },
+    { id: 'sub_tinhoc', label: 'Tin học', short: 'Tin học', hasScore: true },
+    { id: 'sub_congnghe', label: 'Công nghệ', short: 'C.Nghệ', hasScore: true },
+    { id: 'sub_gdtc', label: 'GD Thể chất', short: 'Thể chất', hasScore: false },
+    { id: 'sub_amnhac', label: 'Âm nhạc', short: 'Â.Nhạc', hasScore: false },
+    { id: 'sub_mithuat', label: 'Mĩ thuật', short: 'M.Thuật', hasScore: false },
+    { id: 'sub_trainghiem', label: 'HĐ Trải nghiệm', short: 'HĐTN', hasScore: false }
+  ]
+};
+
 // ================= TIÊU CHÍ CHUẨN THÔNG TƯ 27 =================
 const DEFAULT_QUALITIES = [
   { id: 'pc_yeunuoc', label: 'Yêu nước', short: 'Y.Nước', desc: 'Tự hào về quê hương, yêu quý trường lớp, bảo vệ của công' },
@@ -68,7 +135,8 @@ let currentSession = 'morning'; // 'morning' | 'afternoon' | 'boarding'
 let currentAttendanceMode = 'daily'; // 'daily' | 'monthly'
 let currentAttendanceFilter = 'all'; // 'all' | 'absent' | 'late'
 let currentAssessmentPeriod = 'mid_term1';
-let currentAssessmentView = 'matrix'; // 'matrix' | 'student_detail'
+let currentAssessmentView = 'matrix';
+let currentTT27SubTab = 'subjects'; // 'matrix' | 'student_detail'
 let selectedStudentForDetailIndex = 0;
 let attendanceChartInstance = null;
 let assessmentChartInstance = null;
@@ -341,7 +409,30 @@ function initSampleAssessmentForClass(targetClass) {
   targetClass.students.forEach((s, idx) => {
     const isTop = idx % 3 === 0;
     const isGood = idx % 2 === 0;
+    
+    // Sample subjects data with full 12 subjects
+    const subjects = {
+      sub_tiengviet: { level: isTop ? 'T' : 'Đ', score: isTop ? 10 : (isGood ? 9 : 8) },
+      sub_toan: { level: isTop ? 'T' : 'Đ', score: isTop ? 10 : (isGood ? 9 : 7) },
+      sub_tienganh: { level: isTop ? 'T' : 'Đ', score: isTop ? 9 : 8 },
+      sub_daoduc: { level: 'T' },
+      sub_khoahoc: { level: isTop ? 'T' : 'Đ', score: isTop ? 10 : 8 },
+      sub_lichsudiali: { level: isGood ? 'T' : 'Đ', score: isGood ? 9 : 8 },
+      sub_tinhoc: { level: isTop ? 'T' : 'Đ', score: isTop ? 10 : 9 },
+      sub_congnghe: { level: 'Đ', score: 8 },
+      sub_gdtc: { level: idx === 4 ? 'T' : 'Đ' },
+      sub_amnhac: { level: idx === 2 ? 'T' : 'Đ' },
+      sub_mithuat: { level: isGood ? 'T' : 'Đ' },
+      sub_trainghiem: { level: 'T' }
+    };
+
     targetClass.assessmentData['mid_term1'][s.id] = {
+      subjects,
+      summaryLevel: isTop ? 'Hoàn thành xuất sắc' : (isGood ? 'Hoàn thành tốt' : 'Hoàn thành'),
+      reward: isTop ? 'Học sinh Xuất sắc' : (isGood ? 'Học sinh Tiêu biểu' : 'Không'),
+      subjSummary: isTop ? 'T' : 'Đ',
+      qualSummary: isTop ? 'T' : 'Đ',
+      compSummary: isTop ? 'T' : 'Đ',
       pc_yeunuoc: 'T',
       pc_nhanai: isTop ? 'T' : 'Đ',
       pc_chamchi: isGood ? 'T' : 'Đ',
@@ -1232,21 +1323,28 @@ function saveQuickLog() {
 }
 
 // ========================================================
-// TAB 3: ĐÁNH GIÁ THEO THÔNG TƯ 27 (LINH HOẠT & TÙY BIẾN)
+// TAB 3: ĐÁNH GIÁ THEO THÔNG TƯ 27 (ĐẦY ĐỦ MÔN HỌC, ĐIỂM SỐ & PHẨM CHẤT NĂNG LỰC)
 // ========================================================
 
+function getAllSubjects() {
+  const grade = currentClass ? (currentClass.grade || 4) : 4;
+  const baseSubjects = PRIMARY_SUBJECTS_BY_GRADE[grade] || PRIMARY_SUBJECTS_BY_GRADE[4];
+  const custom = (currentClass && currentClass.customCriteria || []).filter(c => c.group === 'subject');
+  return [...baseSubjects, ...custom];
+}
+
 function getAllQualities() {
-  const custom = (currentClass.customCriteria || []).filter(c => c.group === 'quality');
+  const custom = (currentClass && currentClass.customCriteria || []).filter(c => c.group === 'quality');
   return [...DEFAULT_QUALITIES, ...custom];
 }
 
 function getAllCoreCompetencies() {
-  const custom = (currentClass.customCriteria || []).filter(c => c.group === 'core');
+  const custom = (currentClass && currentClass.customCriteria || []).filter(c => c.group === 'core');
   return [...DEFAULT_CORE_COMPETENCIES, ...custom];
 }
 
 function getAllSpecificCompetencies() {
-  const custom = (currentClass.customCriteria || []).filter(c => c.group === 'spec');
+  const custom = (currentClass && currentClass.customCriteria || []).filter(c => c.group === 'spec');
   return [...DEFAULT_SPECIFIC_COMPETENCIES, ...custom];
 }
 
@@ -1260,35 +1358,54 @@ function changeAssessmentGrade(grade) {
     currentClass.grade = parseInt(grade) || 4;
     saveAppData();
     renderAssessmentView();
-    showToast(`Đã áp dụng cấu hình môn học cho Khối ${grade}`, 'info');
+    showToast(`Đã áp dụng cấu hình môn học chuẩn cho Khối ${grade}`, 'info');
   }
 }
 
-function setAssessmentView(view) {
-  currentAssessmentView = view;
-  const btnMatrix = document.getElementById('btnViewMatrix');
-  const btnDetail = document.getElementById('btnViewDetail');
-  const matrixContainer = document.getElementById('assessmentMatrixContainer');
-  const detailContainer = document.getElementById('assessmentDetailContainer');
+function setTT27SubTab(tabName) {
+  currentTT27SubTab = tabName;
+  const tabs = [
+    { key: 'subjects', btnId: 'btnSubTabSubjects', paneId: 'tt27PaneSubjects' },
+    { key: 'traits', btnId: 'btnSubTabTraits', paneId: 'tt27PaneTraits' },
+    { key: 'summary', btnId: 'btnSubTabSummary', paneId: 'tt27PaneSummary' },
+    { key: 'detail', btnId: 'btnSubTabDetail', paneId: 'tt27PaneDetail' }
+  ];
 
-  if (view === 'matrix') {
-    btnMatrix.className = 'px-3.5 py-1.5 rounded-lg text-xs font-black bg-white text-emerald-900 shadow';
-    btnDetail.className = 'px-3.5 py-1.5 rounded-lg text-xs font-black bg-white/15 text-white hover:bg-white/25';
-    matrixContainer.classList.remove('hidden');
-    detailContainer.classList.add('hidden');
-    renderMatrixAssessment();
-  } else {
-    btnDetail.className = 'px-3.5 py-1.5 rounded-lg text-xs font-black bg-white text-emerald-900 shadow';
-    btnMatrix.className = 'px-3.5 py-1.5 rounded-lg text-xs font-black bg-white/15 text-white hover:bg-white/25';
-    detailContainer.classList.remove('hidden');
-    matrixContainer.classList.add('hidden');
-    renderDetailAssessment();
-  }
+  tabs.forEach(t => {
+    const btn = document.getElementById(t.btnId);
+    const pane = document.getElementById(t.paneId);
+    if (btn) {
+      if (t.key === tabName) {
+        btn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-emerald-950 shadow';
+      } else {
+        btn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white/15 text-white hover:bg-white/25';
+      }
+    }
+    if (pane) {
+      if (t.key === tabName) {
+        pane.classList.remove('hidden');
+      } else {
+        pane.classList.add('hidden');
+      }
+    }
+  });
+
+  if (tabName === 'subjects') renderSubjectsAssessmentTable();
+  else if (tabName === 'traits') renderTraitsAssessmentTable();
+  else if (tabName === 'summary') renderSummaryAssessmentTable();
+  else if (tabName === 'detail') renderDetailAssessment();
 }
 
 function renderAssessmentView() {
-  if (currentAssessmentView === 'matrix') renderMatrixAssessment();
-  else renderDetailAssessment();
+  const gSelect = document.getElementById('assessmentGradeSelect');
+  if (gSelect && currentClass) {
+    gSelect.value = currentClass.grade || 4;
+  }
+  const pSelect = document.getElementById('assessmentPeriodSelect');
+  if (pSelect) {
+    pSelect.value = currentAssessmentPeriod;
+  }
+  setTT27SubTab(currentTT27SubTab || 'subjects');
 }
 
 function getPeriodAssessment() {
@@ -1303,13 +1420,81 @@ function getStudentAssessment(studentId) {
   const periodData = getPeriodAssessment();
   if (!periodData[studentId]) {
     periodData[studentId] = {
+      subjects: {},
+      summaryLevel: 'Hoàn thành tốt',
+      reward: 'Học sinh Tiêu biểu',
+      subjSummary: 'T',
+      qualSummary: 'T',
+      compSummary: 'T',
       pc_yeunuoc: 'T', pc_nhanai: 'Đ', pc_chamchi: 'Đ', pc_trungthuc: 'T', pc_trachnhiem: 'Đ',
       nl_tuchu: 'Đ', nl_giaotiep: 'Đ', nl_giaiquyet: 'Đ',
       nl_ngonngu: 'Đ', nl_tinhtoan: 'Đ', nl_khoahoc: 'Đ', nl_congnghe: 'Đ', nl_tinhoc: 'Đ', nl_thammy: 'Đ', nl_thechat: 'Đ',
       comment: 'Hoàn thành tốt các nội dung học tập và rèn luyện.'
     };
   }
+  if (!periodData[studentId].subjects) {
+    periodData[studentId].subjects = {};
+  }
+  const subjects = getAllSubjects();
+  subjects.forEach(sub => {
+    if (!periodData[studentId].subjects[sub.id]) {
+      periodData[studentId].subjects[sub.id] = {
+        level: 'Đ',
+        score: sub.hasScore ? 8 : null
+      };
+    }
+  });
+  if (!periodData[studentId].summaryLevel) {
+    periodData[studentId].summaryLevel = 'Hoàn thành tốt';
+  }
+  if (periodData[studentId].reward === undefined) {
+    periodData[studentId].reward = 'Học sinh Tiêu biểu';
+  }
   return periodData[studentId];
+}
+
+function getStudentSubject(studentId, subjectId) {
+  const rec = getStudentAssessment(studentId);
+  if (!rec.subjects[subjectId]) {
+    const subObj = getAllSubjects().find(s => s.id === subjectId);
+    rec.subjects[subjectId] = {
+      level: 'Đ',
+      score: (subObj && subObj.hasScore) ? 8 : null
+    };
+  }
+  return rec.subjects[subjectId];
+}
+
+function toggleSubjectLevel(studentId, subjectId) {
+  const subj = getStudentSubject(studentId, subjectId);
+  const currentVal = subj.level || 'Đ';
+  let nextVal = 'T';
+  if (currentVal === 'T') nextVal = 'Đ';
+  else if (currentVal === 'Đ') nextVal = 'C';
+  else if (currentVal === 'C') nextVal = 'T';
+
+  subj.level = nextVal;
+  saveAppData();
+
+  const btn = document.getElementById(`subj_lvl_${studentId}_${subjectId}`);
+  if (btn) {
+    btn.className = `matrix-cell-btn cell-${nextVal}`;
+    btn.innerText = nextVal;
+    btn.title = `Mức: ${nextVal}`;
+  }
+}
+
+function updateSubjectScore(studentId, subjectId, scoreVal) {
+  const subj = getStudentSubject(studentId, subjectId);
+  if (scoreVal === '' || scoreVal === null || scoreVal === undefined) {
+    subj.score = null;
+  } else {
+    let num = parseInt(scoreVal);
+    if (isNaN(num)) num = null;
+    else num = Math.min(10, Math.max(1, num));
+    subj.score = num;
+  }
+  saveAppData();
 }
 
 function toggleMatrixCell(studentId, criteriaId) {
@@ -1336,8 +1521,24 @@ function updateMatrixComment(studentId, comment) {
   saveAppData();
 }
 
-function quickFillAllAssessment(val) {
-  if (confirm(`Đặt tất cả tiêu chí đánh giá toàn lớp về mức [${val}]?`)) {
+function quickFillSubjects(val) {
+  if (confirm(`Đặt tất cả môn học của toàn lớp về mức [${val}]?`)) {
+    const subList = getAllSubjects();
+    currentClass.students.forEach(s => {
+      const rec = getStudentAssessment(s.id);
+      subList.forEach(sub => {
+        if (!rec.subjects[sub.id]) rec.subjects[sub.id] = {};
+        rec.subjects[sub.id].level = val;
+      });
+    });
+    saveAppData();
+    renderSubjectsAssessmentTable();
+    showToast(`Đã đặt toàn bộ môn học cả lớp về mức [${val}]`, 'success');
+  }
+}
+
+function quickFillTraits(val) {
+  if (confirm(`Đặt tất cả phẩm chất và năng lực của toàn lớp về mức [${val}]?`)) {
     const qList = getAllQualities();
     const cList = getAllCoreCompetencies();
     const scList = getAllSpecificCompetencies();
@@ -1349,14 +1550,184 @@ function quickFillAllAssessment(val) {
       scList.forEach(sc => rec[sc.id] = val);
     });
     saveAppData();
-    renderMatrixAssessment();
-    showToast(`Đã đặt toàn lớp về mức [${val}]`, 'success');
+    renderTraitsAssessmentTable();
+    showToast(`Đã đặt phẩm chất & năng lực toàn lớp về mức [${val}]`, 'success');
   }
 }
 
-function renderMatrixAssessment() {
-  const thead = document.getElementById('matrixAssessmentHeader');
-  const tbody = document.getElementById('matrixAssessmentBody');
+function autoCalculateSummary() {
+  const subList = getAllSubjects();
+  const qList = getAllQualities();
+  const cList = getAllCoreCompetencies();
+  const scList = getAllSpecificCompetencies();
+
+  currentClass.students.forEach(s => {
+    const rec = getStudentAssessment(s.id);
+
+    let allSubjectsT = true;
+    let hasSubjectC = false;
+    let minScore = 10;
+    let hasAnyScore = false;
+
+    subList.forEach(sub => {
+      const subj = (rec.subjects && rec.subjects[sub.id]) || { level: 'Đ' };
+      if (subj.level !== 'T') allSubjectsT = false;
+      if (subj.level === 'C') hasSubjectC = true;
+      if (sub.hasScore && subj.score !== null && subj.score !== undefined) {
+        hasAnyScore = true;
+        if (subj.score < minScore) minScore = subj.score;
+      }
+    });
+
+    if (!hasAnyScore) minScore = 10;
+
+    let allQualitiesT = true;
+    let hasQualityC = false;
+    qList.forEach(q => {
+      const v = rec[q.id] || 'Đ';
+      if (v !== 'T') allQualitiesT = false;
+      if (v === 'C') hasQualityC = true;
+    });
+
+    let allCompT = true;
+    let hasCompC = false;
+    [...cList, ...scList].forEach(c => {
+      const v = rec[c.id] || 'Đ';
+      if (v !== 'T') allCompT = false;
+      if (v === 'C') hasCompC = true;
+    });
+
+    // Circular 27 Article 13 evaluation
+    if (allSubjectsT && allQualitiesT && allCompT && minScore >= 9) {
+      rec.summaryLevel = 'Hoàn thành xuất sắc';
+      rec.reward = 'Học sinh Xuất sắc';
+      rec.subjSummary = 'T';
+      rec.qualSummary = 'T';
+      rec.compSummary = 'T';
+    } else if (!hasSubjectC && !hasQualityC && !hasCompC && minScore >= 7) {
+      rec.summaryLevel = 'Hoàn thành tốt';
+      rec.reward = (minScore >= 9 || allSubjectsT) ? 'Học sinh Tiêu biểu' : 'Không';
+      rec.subjSummary = allSubjectsT ? 'T' : 'Đ';
+      rec.qualSummary = allQualitiesT ? 'T' : 'Đ';
+      rec.compSummary = allCompT ? 'T' : 'Đ';
+    } else if (!hasSubjectC && !hasQualityC && !hasCompC && minScore >= 5) {
+      rec.summaryLevel = 'Hoàn thành';
+      rec.reward = 'Không';
+      rec.subjSummary = 'Đ';
+      rec.qualSummary = 'Đ';
+      rec.compSummary = 'Đ';
+    } else {
+      rec.summaryLevel = 'Chưa hoàn thành';
+      rec.reward = 'Không';
+      rec.subjSummary = hasSubjectC ? 'C' : 'Đ';
+      rec.qualSummary = hasQualityC ? 'C' : 'Đ';
+      rec.compSummary = hasCompC ? 'C' : 'Đ';
+    }
+  });
+
+  saveAppData();
+  renderSummaryAssessmentTable();
+  showToast('Đã tự động xét mức độ hoàn thành & danh hiệu khen thưởng chuẩn TT27!', 'success');
+}
+
+function renderSubjectsAssessmentTable() {
+  const thead = document.getElementById('subjectsAssessmentHeader');
+  const tbody = document.getElementById('subjectsAssessmentBody');
+  if (!thead || !tbody || !currentClass) return;
+
+  const subList = getAllSubjects();
+
+  // Header row 1
+  let row1 = `
+    <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-300">
+      <th rowspan="2" class="py-2.5 px-2 border-r border-slate-300 w-10">STT</th>
+      <th rowspan="2" class="py-2.5 px-3 border-r border-slate-300 text-left min-w-[150px]">Họ và tên</th>
+  `;
+
+  subList.forEach(sub => {
+    if (sub.hasScore) {
+      row1 += `<th colspan="2" class="py-1.5 px-2 border-r border-slate-300 bg-blue-50 text-blue-950 font-extrabold uppercase text-[11px]" title="${sub.label}">${sub.short || sub.label}</th>`;
+    } else {
+      row1 += `<th rowspan="2" class="py-2 px-2 border-r border-slate-300 bg-sky-50/80 text-sky-950 font-extrabold text-[11px] min-w-[65px]" title="${sub.label}">${sub.short || sub.label}</th>`;
+    }
+  });
+
+  row1 += `<th rowspan="2" class="py-2.5 px-3 text-left min-w-[200px]">Lời nhận xét của GVCN</th></tr>`;
+
+  // Header row 2
+  let row2 = `<tr class="bg-slate-50 text-[10px] font-bold border-b border-slate-300">`;
+  subList.forEach(sub => {
+    if (sub.hasScore) {
+      row2 += `
+        <th class="py-1 px-1 border-r border-slate-200 w-12 text-center text-slate-600">Mức</th>
+        <th class="py-1 px-1 border-r border-slate-200 w-12 text-center text-blue-700">Điểm</th>
+      `;
+    }
+  });
+  row2 += `</tr>`;
+
+  thead.innerHTML = row1 + row2;
+
+  // Body
+  let html = '';
+  currentClass.students.forEach(s => {
+    const rec = getStudentAssessment(s.id);
+    html += `
+      <tr class="hover:bg-slate-50 transition text-xs">
+        <td class="py-2 px-2 font-bold text-slate-500 border-r border-slate-200">${s.stt}</td>
+        <td class="py-2 px-3 font-extrabold text-slate-800 text-left border-r border-slate-200">
+          <div class="hover:text-blue-600 cursor-pointer" onclick="selectDetailStudentById('${s.id}')">
+            ${s.name}
+          </div>
+        </td>
+    `;
+
+    subList.forEach(sub => {
+      const subj = (rec.subjects && rec.subjects[sub.id]) || { level: 'Đ', score: sub.hasScore ? 8 : null };
+      if (sub.hasScore) {
+        html += `
+          <td class="py-1 px-1 border-r border-slate-200 text-center">
+            <button id="subj_lvl_${s.id}_${sub.id}" onclick="toggleSubjectLevel('${s.id}', '${sub.id}')" class="matrix-cell-btn cell-${subj.level || 'Đ'}" title="${sub.label}: Mức ${subj.level || 'Đ'}">
+              ${subj.level || 'Đ'}
+            </button>
+          </td>
+          <td class="py-1 px-1 border-r border-slate-200 text-center">
+            <input type="number" min="1" max="10" step="1" value="${subj.score !== null && subj.score !== undefined ? subj.score : ''}" placeholder="-" 
+              onchange="updateSubjectScore('${s.id}', '${sub.id}', this.value)" 
+              class="w-10 text-center py-0.5 font-black text-xs text-blue-900 bg-slate-50 border border-slate-200 rounded-md focus:bg-white focus:border-blue-500 focus:outline-none">
+          </td>
+        `;
+      } else {
+        html += `
+          <td class="py-1 px-1 border-r border-slate-200 text-center">
+            <button id="subj_lvl_${s.id}_${sub.id}" onclick="toggleSubjectLevel('${s.id}', '${sub.id}')" class="matrix-cell-btn cell-${subj.level || 'Đ'}" title="${sub.label}: Mức ${subj.level || 'Đ'}">
+              ${subj.level || 'Đ'}
+            </button>
+          </td>
+        `;
+      }
+    });
+
+    html += `
+        <td class="py-1 px-2 text-left">
+          <input type="text" value="${rec.comment || ''}" placeholder="Nhận xét môn học..." 
+            onchange="updateMatrixComment('${s.id}', this.value)" 
+            class="w-full px-2 py-1 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none">
+        </td>
+      </tr>
+    `;
+  });
+
+  if (currentClass.students.length === 0) {
+    html = `<tr><td colspan="20" class="py-8 text-center text-slate-400">Chưa có học sinh nào trong lớp.</td></tr>`;
+  }
+
+  tbody.innerHTML = html;
+}
+
+function renderTraitsAssessmentTable() {
+  const thead = document.getElementById('traitsAssessmentHeader');
+  const tbody = document.getElementById('traitsAssessmentBody');
   if (!thead || !tbody || !currentClass) return;
 
   const qList = getAllQualities();
@@ -1370,7 +1741,7 @@ function renderMatrixAssessment() {
       <th rowspan="2" class="py-2.5 px-3 border-r border-slate-300 text-left min-w-[150px]">Họ và tên</th>
       <th colspan="${qList.length}" class="py-1.5 px-2 border-r border-slate-300 bg-emerald-100/80 text-emerald-950 font-extrabold uppercase">5 Phẩm Chất Chủ Yếu</th>
       <th colspan="${cList.length}" class="py-1.5 px-2 border-r border-slate-300 bg-sky-100/80 text-sky-950 font-extrabold uppercase">3 Năng Lực Chung</th>
-      <th colspan="${scList.length}" class="py-1.5 px-2 border-r border-slate-300 bg-purple-100/80 text-purple-950 font-extrabold uppercase">Năng Lực Đặc Thù / Môn Học</th>
+      <th colspan="${scList.length}" class="py-1.5 px-2 border-r border-slate-300 bg-purple-100/80 text-purple-950 font-extrabold uppercase">7 Năng Lực Đặc Thù</th>
       <th rowspan="2" class="py-2.5 px-3 text-left min-w-[200px]">Lời nhận xét của GVCN</th>
     </tr>
     <tr class="bg-slate-50 text-[11px] font-bold border-b border-slate-300">
@@ -1394,7 +1765,7 @@ function renderMatrixAssessment() {
         </td>
 
         ${qList.map(q => `
-          <td class="py-1 px-1 border-r border-slate-200">
+          <td class="py-1 px-1 border-r border-slate-200 text-center">
             <button id="cell_${s.id}_${q.id}" onclick="toggleMatrixCell('${s.id}', '${q.id}')" class="matrix-cell-btn cell-${rec[q.id] || 'Đ'}" title="${q.label}">
               ${rec[q.id] || 'Đ'}
             </button>
@@ -1402,7 +1773,7 @@ function renderMatrixAssessment() {
         `).join('')}
 
         ${cList.map(c => `
-          <td class="py-1 px-1 border-r border-slate-200">
+          <td class="py-1 px-1 border-r border-slate-200 text-center">
             <button id="cell_${s.id}_${c.id}" onclick="toggleMatrixCell('${s.id}', '${c.id}')" class="matrix-cell-btn cell-${rec[c.id] || 'Đ'}" title="${c.label}">
               ${rec[c.id] || 'Đ'}
             </button>
@@ -1410,7 +1781,7 @@ function renderMatrixAssessment() {
         `).join('')}
 
         ${scList.map(sc => `
-          <td class="py-1 px-1 border-r border-slate-200">
+          <td class="py-1 px-1 border-r border-slate-200 text-center">
             <button id="cell_${s.id}_${sc.id}" onclick="toggleMatrixCell('${s.id}', '${sc.id}')" class="matrix-cell-btn cell-${rec[sc.id] || 'Đ'}" title="${sc.label}">
               ${rec[sc.id] || 'Đ'}
             </button>
@@ -1418,7 +1789,7 @@ function renderMatrixAssessment() {
         `).join('')}
 
         <td class="py-1 px-2 text-left">
-          <input type="text" value="${rec.comment || ''}" placeholder="Nhận xét..." 
+          <input type="text" value="${rec.comment || ''}" placeholder="Nhận xét phẩm chất, năng lực..." 
             onchange="updateMatrixComment('${s.id}', this.value)" 
             class="w-full px-2 py-1 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none">
         </td>
@@ -1431,6 +1802,117 @@ function renderMatrixAssessment() {
   }
 
   tbody.innerHTML = html;
+}
+
+function renderSummaryAssessmentTable() {
+  const tbody = document.getElementById('summaryAssessmentBody');
+  if (!tbody || !currentClass) return;
+
+  let html = '';
+  currentClass.students.forEach(s => {
+    const rec = getStudentAssessment(s.id);
+    const summaryLevel = rec.summaryLevel || 'Hoàn thành tốt';
+    const reward = rec.reward || 'Học sinh Tiêu biểu';
+    const subjLvl = rec.subjSummary || 'T';
+    const qualLvl = rec.qualSummary || 'T';
+    const compLvl = rec.compSummary || 'T';
+
+    html += `
+      <tr class="hover:bg-slate-50 transition text-xs">
+        <td class="py-2.5 px-2 font-bold text-slate-500 border-r border-slate-200">${s.stt}</td>
+        <td class="py-2.5 px-3 font-extrabold text-slate-800 text-left border-r border-slate-200">
+          <div class="hover:text-blue-600 cursor-pointer" onclick="selectDetailStudentById('${s.id}')">
+            ${s.name}
+          </div>
+        </td>
+
+        <td class="py-2 px-2 border-r border-slate-200 text-center">
+          <select onchange="updateSummarySubj('${s.id}', this.value)" class="text-xs font-bold px-2 py-1 rounded-lg border border-slate-200 bg-white">
+            <option value="T" ${subjLvl === 'T' ? 'selected' : ''}>T (Tốt)</option>
+            <option value="Đ" ${subjLvl === 'Đ' ? 'selected' : ''}>Đ (Đạt)</option>
+            <option value="C" ${subjLvl === 'C' ? 'selected' : ''}>C (Cố gắng)</option>
+          </select>
+        </td>
+
+        <td class="py-2 px-2 border-r border-slate-200 text-center">
+          <select onchange="updateSummaryQual('${s.id}', this.value)" class="text-xs font-bold px-2 py-1 rounded-lg border border-slate-200 bg-white">
+            <option value="T" ${qualLvl === 'T' ? 'selected' : ''}>T (Tốt)</option>
+            <option value="Đ" ${qualLvl === 'Đ' ? 'selected' : ''}>Đ (Đạt)</option>
+            <option value="C" ${qualLvl === 'C' ? 'selected' : ''}>C (Cố gắng)</option>
+          </select>
+        </td>
+
+        <td class="py-2 px-2 border-r border-slate-200 text-center">
+          <select onchange="updateSummaryComp('${s.id}', this.value)" class="text-xs font-bold px-2 py-1 rounded-lg border border-slate-200 bg-white">
+            <option value="T" ${compLvl === 'T' ? 'selected' : ''}>T (Tốt)</option>
+            <option value="Đ" ${compLvl === 'Đ' ? 'selected' : ''}>Đ (Đạt)</option>
+            <option value="C" ${compLvl === 'C' ? 'selected' : ''}>C (Cố gắng)</option>
+          </select>
+        </td>
+
+        <td class="py-2 px-2 border-r border-slate-200 text-center">
+          <select onchange="updateStudentSummaryLevel('${s.id}', this.value)" class="text-xs font-black px-2.5 py-1.5 rounded-xl border border-slate-300 ${summaryLevel === 'Hoàn thành xuất sắc' ? 'bg-emerald-100 text-emerald-900 border-emerald-300' : summaryLevel === 'Hoàn thành tốt' ? 'bg-sky-100 text-sky-900 border-sky-300' : summaryLevel === 'Hoàn thành' ? 'bg-amber-100 text-amber-900 border-amber-300' : 'bg-rose-100 text-rose-900 border-rose-300'}">
+            <option value="Hoàn thành xuất sắc" ${summaryLevel === 'Hoàn thành xuất sắc' ? 'selected' : ''}>🌟 Hoàn thành xuất sắc</option>
+            <option value="Hoàn thành tốt" ${summaryLevel === 'Hoàn thành tốt' ? 'selected' : ''}>👍 Hoàn thành tốt</option>
+            <option value="Hoàn thành" ${summaryLevel === 'Hoàn thành' ? 'selected' : ''}>✓ Hoàn thành</option>
+            <option value="Chưa hoàn thành" ${summaryLevel === 'Chưa hoàn thành' ? 'selected' : ''}>⚠️ Chưa hoàn thành</option>
+          </select>
+        </td>
+
+        <td class="py-2 px-2 border-r border-slate-200 text-center">
+          <select onchange="updateStudentReward('${s.id}', this.value)" class="text-xs font-extrabold px-2 py-1 rounded-lg border border-slate-200 bg-white text-slate-800">
+            <option value="Học sinh Xuất sắc" ${reward === 'Học sinh Xuất sắc' ? 'selected' : ''}>🏆 Học sinh Xuất sắc</option>
+            <option value="Học sinh Tiêu biểu" ${reward === 'Học sinh Tiêu biểu' ? 'selected' : ''}>🎖️ Học sinh Tiêu biểu</option>
+            <option value="Khen ngợi từng mặt" ${reward === 'Khen ngợi từng mặt' ? 'selected' : ''}>🎗️ Khen ngợi từng mặt</option>
+            <option value="Không" ${reward === 'Không' ? 'selected' : ''}>Không khen thưởng</option>
+          </select>
+        </td>
+
+        <td class="py-1 px-2 text-left">
+          <input type="text" value="${rec.comment || ''}" placeholder="Lời nhận xét tổng quát cuối kỳ..." 
+            onchange="updateMatrixComment('${s.id}', this.value)" 
+            class="w-full px-2 py-1 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:outline-none">
+        </td>
+      </tr>
+    `;
+  });
+
+  if (currentClass.students.length === 0) {
+    html = `<tr><td colspan="8" class="py-8 text-center text-slate-400">Chưa có học sinh nào.</td></tr>`;
+  }
+
+  tbody.innerHTML = html;
+}
+
+function updateSummarySubj(studentId, val) {
+  const rec = getStudentAssessment(studentId);
+  rec.subjSummary = val;
+  saveAppData();
+}
+
+function updateSummaryQual(studentId, val) {
+  const rec = getStudentAssessment(studentId);
+  rec.qualSummary = val;
+  saveAppData();
+}
+
+function updateSummaryComp(studentId, val) {
+  const rec = getStudentAssessment(studentId);
+  rec.compSummary = val;
+  saveAppData();
+}
+
+function updateStudentSummaryLevel(studentId, val) {
+  const rec = getStudentAssessment(studentId);
+  rec.summaryLevel = val;
+  saveAppData();
+  renderSummaryAssessmentTable();
+}
+
+function updateStudentReward(studentId, val) {
+  const rec = getStudentAssessment(studentId);
+  rec.reward = val;
+  saveAppData();
 }
 
 function renderDetailAssessment() {
@@ -1474,7 +1956,7 @@ function selectDetailStudentById(studentId) {
   const idx = currentClass.students.findIndex(s => s.id === studentId);
   if (idx !== -1) {
     selectedStudentForDetailIndex = idx;
-    setAssessmentView('student_detail');
+    setTT27SubTab('detail');
   }
 }
 
@@ -1495,7 +1977,39 @@ function loadCurrentDetailStudentForm() {
 
   const rec = getStudentAssessment(currentStudent.id);
 
-  // Render 5 Phẩm chất
+  // 1. Render All Subjects & Exam Scores
+  const sGrid = document.getElementById('subjectsPickerGrid');
+  if (sGrid) {
+    const subList = getAllSubjects();
+    sGrid.innerHTML = subList.map(sub => {
+      const subj = (rec.subjects && rec.subjects[sub.id]) || { level: 'Đ', score: sub.hasScore ? 8 : null };
+      return `
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-2.5 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-black text-slate-800 text-xs truncate max-w-[150px]" title="${sub.label}">${sub.label}</span>
+            ${sub.hasScore ? `<span class="text-[9px] bg-blue-100 text-blue-800 font-extrabold px-1.5 py-0.5 rounded">Có điểm KT</span>` : ''}
+          </div>
+          <div class="flex items-center justify-between gap-1.5">
+            <div class="flex items-center gap-1">
+              <button onclick="setDetailSubjectLevel('${sub.id}', 'T')" class="w-6 h-6 rounded-md text-xs font-black transition ${subj.level === 'T' ? 'bg-emerald-600 text-white shadow' : 'bg-white text-slate-600 border border-slate-200'}">T</button>
+              <button onclick="setDetailSubjectLevel('${sub.id}', 'Đ')" class="w-6 h-6 rounded-md text-xs font-black transition ${subj.level === 'Đ' ? 'bg-sky-600 text-white shadow' : 'bg-white text-slate-600 border border-slate-200'}">Đ</button>
+              <button onclick="setDetailSubjectLevel('${sub.id}', 'C')" class="w-6 h-6 rounded-md text-xs font-black transition ${subj.level === 'C' ? 'bg-amber-600 text-white shadow' : 'bg-white text-slate-600 border border-slate-200'}">C</button>
+            </div>
+            ${sub.hasScore ? `
+              <div class="flex items-center gap-1">
+                <span class="text-[10px] text-slate-500 font-bold">Điểm:</span>
+                <input type="number" min="1" max="10" step="1" value="${subj.score !== null && subj.score !== undefined ? subj.score : ''}" placeholder="-" 
+                  onchange="setDetailSubjectScore('${sub.id}', this.value)" 
+                  class="w-11 text-center py-0.5 text-xs font-black text-blue-900 bg-white border border-slate-300 rounded-lg">
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // 2. Render 5 Phẩm chất
   const qGrid = document.getElementById('qualitiesPickerGrid');
   if (qGrid) {
     qGrid.innerHTML = getAllQualities().map(q => `
@@ -1513,7 +2027,7 @@ function loadCurrentDetailStudentForm() {
     `).join('');
   }
 
-  // Render 3 Năng lực chung
+  // 3. Render 3 Năng lực chung
   const cGrid = document.getElementById('coreCompetenciesPickerGrid');
   if (cGrid) {
     cGrid.innerHTML = getAllCoreCompetencies().map(c => `
@@ -1531,7 +2045,7 @@ function loadCurrentDetailStudentForm() {
     `).join('');
   }
 
-  // Render Năng lực đặc thù & Tiêu chí riêng
+  // 4. Render 7 Năng lực đặc thù
   const scGrid = document.getElementById('specCompetenciesPickerGrid');
   if (scGrid) {
     scGrid.innerHTML = getAllSpecificCompetencies().map(sc => `
@@ -1546,7 +2060,7 @@ function loadCurrentDetailStudentForm() {
     `).join('');
   }
 
-  // Comment bank buttons
+  // Comment bank
   const bank = document.getElementById('commentQuickBank');
   if (bank) {
     bank.innerHTML = customComments.map(comment => `
@@ -1557,6 +2071,21 @@ function loadCurrentDetailStudentForm() {
   }
 
   document.getElementById('detailTeacherComment').value = rec.comment || '';
+}
+
+function setDetailSubjectLevel(subjectId, val) {
+  const currentStudent = currentClass.students[selectedStudentForDetailIndex];
+  if (!currentStudent) return;
+  const subj = getStudentSubject(currentStudent.id, subjectId);
+  subj.level = val;
+  saveAppData();
+  loadCurrentDetailStudentForm();
+}
+
+function setDetailSubjectScore(subjectId, score) {
+  const currentStudent = currentClass.students[selectedStudentForDetailIndex];
+  if (!currentStudent) return;
+  updateSubjectScore(currentStudent.id, subjectId, score);
 }
 
 function setDetailCriteriaValue(criteriaId, val) {
@@ -1583,11 +2112,10 @@ function saveCurrentDetailComment() {
   saveAppData();
 }
 
-// THÊM TIÊU CHÍ RIÊNG
+// THÊM TIÊU CHÍ / MÔN HỌC RIÊNG
 function openAddCriteriaModal() {
   document.getElementById('newCriteriaLabel').value = '';
   document.getElementById('newCriteriaShort').value = '';
-  document.getElementById('newCriteriaDesc').value = '';
   document.getElementById('addCriteriaModal').classList.remove('hidden');
 }
 
@@ -1598,26 +2126,26 @@ function closeAddCriteriaModal() {
 function saveNewCriteria() {
   const label = document.getElementById('newCriteriaLabel').value.trim();
   if (!label) {
-    showToast('Vui lòng nhập tên môn/tiêu chí!', 'error');
+    showToast('Vui lòng nhập tên môn học / hoạt động giáo dục!', 'error');
     return;
   }
   const short = document.getElementById('newCriteriaShort').value.trim() || label.slice(0, 5);
-  const group = document.getElementById('newCriteriaGroup').value;
-  const desc = document.getElementById('newCriteriaDesc').value.trim();
+  const hasScore = document.getElementById('newCriteriaHasScore').value === 'true';
 
   if (!currentClass.customCriteria) currentClass.customCriteria = [];
   currentClass.customCriteria.push({
-    id: 'crit_' + Date.now().toString().slice(-4),
+    id: 'sub_custom_' + Date.now().toString().slice(-4),
     label,
     short,
-    group,
-    desc
+    group: 'subject',
+    hasScore,
+    desc: ''
   });
 
   saveAppData();
   closeAddCriteriaModal();
   renderAssessmentView();
-  showToast(`Đã thêm tiêu chí "${label}" vào bảng đánh giá!`, 'success');
+  showToast(`Đã thêm môn học "${label}" vào bảng đánh giá!`, 'success');
 }
 
 // QUẢN LÝ NGÂN HÀNG NHẬN XÉT MẪU
@@ -1733,9 +2261,20 @@ function renderAssessmentChart() {
   const periodData = getPeriodAssessment();
   let countT = 0, countD = 0, countC = 0;
 
+  const subList = getAllSubjects();
   const allCrit = [...getAllQualities(), ...getAllCoreCompetencies(), ...getAllSpecificCompetencies()];
   (currentClass.students || []).forEach(s => {
     const rec = periodData[s.id] || {};
+    
+    // Count subjects
+    subList.forEach(sub => {
+      const subj = (rec.subjects && rec.subjects[sub.id]) || { level: 'Đ' };
+      if (subj.level === 'T') countT++;
+      else if (subj.level === 'Đ') countD++;
+      else if (subj.level === 'C') countC++;
+    });
+
+    // Count traits
     allCrit.forEach(item => {
       const v = rec[item.id] || 'Đ';
       if (v === 'T') countT++;
@@ -1906,6 +2445,7 @@ function printCircular27Report() {
   if (!printArea || !currentClass) return;
 
   const periodData = getPeriodAssessment();
+  const subList = getAllSubjects();
   const qList = getAllQualities();
   const cList = getAllCoreCompetencies();
 
@@ -1916,42 +2456,51 @@ function printCircular27Report() {
       <tr>
         <td style="text-align:center; padding: 4px; border: 1px solid #000;">${s.stt}</td>
         <td style="padding: 4px; border: 1px solid #000; font-weight: bold; white-space: nowrap;">${s.name}</td>
-        ${qList.map(q => `<td style="text-align:center; border: 1px solid #000;">${rec[q.id] || 'Đ'}</td>`).join('')}
-        ${cList.map(c => `<td style="text-align:center; border: 1px solid #000;">${rec[c.id] || 'Đ'}</td>`).join('')}
-        <td style="padding: 4px; border: 1px solid #000; font-size: 8.5pt;">${rec.comment || ''}</td>
+        ${subList.map(sub => {
+          const subj = (rec.subjects && rec.subjects[sub.id]) || { level: 'Đ' };
+          const text = sub.hasScore && subj.score ? `${subj.level || 'Đ'} (${subj.score})` : (subj.level || 'Đ');
+          return `<td style="text-align:center; border: 1px solid #000; font-size: 8pt;">${text}</td>`;
+        }).join('')}
+        ${qList.map(q => `<td style="text-align:center; border: 1px solid #000; font-size: 8pt;">${rec[q.id] || 'Đ'}</td>`).join('')}
+        ${cList.map(c => `<td style="text-align:center; border: 1px solid #000; font-size: 8pt;">${rec[c.id] || 'Đ'}</td>`).join('')}
+        <td style="text-align:center; border: 1px solid #000; font-weight: bold; font-size: 8pt;">${rec.summaryLevel || 'HT Tốt'}</td>
+        <td style="padding: 4px; border: 1px solid #000; font-size: 8pt;">${rec.comment || ''}</td>
       </tr>
     `;
   });
 
   printArea.innerHTML = `
-    <div style="font-family: 'Times New Roman', serif; color: #000; line-height: 1.3;">
-      <div style="display:flex; justify-content:space-between; margin-bottom: 12px;">
+    <div style="font-family: 'Times New Roman', serif; color: #000; line-height: 1.2;">
+      <div style="display:flex; justify-content:space-between; margin-bottom: 10px;">
         <div style="text-align:center;">
-          <p style="text-transform:uppercase; font-size:9pt; margin:0;">${printConfig.upperOrg}</p>
-          <p style="font-weight:bold; font-size:10.5pt; margin:0;">${printConfig.schoolTitle || currentClass.schoolName}</p>
+          <p style="text-transform:uppercase; font-size:8.5pt; margin:0;">${printConfig.upperOrg}</p>
+          <p style="font-weight:bold; font-size:10pt; margin:0;">${printConfig.schoolTitle || currentClass.schoolName}</p>
           <p style="font-size:9pt; margin:0;">LỚP: <b>${currentClass.name.toUpperCase()}</b></p>
         </div>
         <div style="text-align:center;">
-          <p style="font-weight:bold; font-size:10pt; margin:0;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
-          <p style="text-decoration:underline; font-size:9pt; margin:0;">Độc lập - Tự do - Hạnh phúc</p>
+          <p style="font-weight:bold; font-size:9.5pt; margin:0;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+          <p style="text-decoration:underline; font-size:8.5pt; margin:0;">Độc lập - Tự do - Hạnh phúc</p>
         </div>
       </div>
 
-      <div style="text-align:center; margin: 15px 0;">
-        <h2 style="text-transform:uppercase; font-size:13pt; margin:0; font-weight:bold;">BẢNG TỔNG HỢP KẾT QUẢ ĐÁNH GIÁ GIÁO DỤC THEO THÔNG TƯ 27/2020/TT-BGDĐT</h2>
-        <p style="font-style:italic; font-size:9.5pt; margin: 2px 0 0 0;">Năm học: ${currentClass.schoolYear}</p>
+      <div style="text-align:center; margin: 10px 0;">
+        <h2 style="text-transform:uppercase; font-size:12pt; margin:0; font-weight:bold;">BẢNG TỔNG HỢP ĐÁNH GIÁ CÁC MÔN HỌC, PHẨM CHẤT & NĂNG LỰC (TT 27/2020/TT-BGDĐT)</h2>
+        <p style="font-style:italic; font-size:9pt; margin: 2px 0 0 0;">Năm học: ${currentClass.schoolYear} • Đợt: ${currentAssessmentPeriod}</p>
       </div>
 
-      <table style="width:100%; border-collapse: collapse; font-size: 9pt;">
+      <table style="width:100%; border-collapse: collapse; font-size: 8pt;">
         <thead>
           <tr style="background-color: #f2f2f2; text-align: center;">
-            <th rowspan="2" style="border: 1px solid #000; padding: 4px;">STT</th>
-            <th rowspan="2" style="border: 1px solid #000; padding: 4px;">Họ và tên học sinh</th>
-            <th colspan="${qList.length}" style="border: 1px solid #000; padding: 4px;">Phẩm chất chủ yếu</th>
-            <th colspan="${cList.length}" style="border: 1px solid #000; padding: 4px;">Năng lực chung</th>
-            <th rowspan="2" style="border: 1px solid #000; padding: 4px;">Lời nhận xét của GVCN</th>
+            <th rowspan="2" style="border: 1px solid #000; padding: 3px;">STT</th>
+            <th rowspan="2" style="border: 1px solid #000; padding: 3px;">Họ và tên học sinh</th>
+            <th colspan="${subList.length}" style="border: 1px solid #000; padding: 3px;">Các môn học & HĐGD (Mức/Điểm)</th>
+            <th colspan="${qList.length}" style="border: 1px solid #000; padding: 3px;">Phẩm chất</th>
+            <th colspan="${cList.length}" style="border: 1px solid #000; padding: 3px;">Năng lực</th>
+            <th rowspan="2" style="border: 1px solid #000; padding: 3px;">Xếp loại</th>
+            <th rowspan="2" style="border: 1px solid #000; padding: 3px;">Nhận xét của GVCN</th>
           </tr>
-          <tr style="background-color: #f2f2f2; text-align: center; font-size: 8pt;">
+          <tr style="background-color: #f2f2f2; text-align: center; font-size: 7.5pt;">
+            ${subList.map(s => `<th style="border: 1px solid #000; padding: 2px;">${s.short || s.label.slice(0, 4)}</th>`).join('')}
             ${qList.map(q => `<th style="border: 1px solid #000; padding: 2px;">${q.short || q.label.slice(0, 4)}</th>`).join('')}
             ${cList.map(c => `<th style="border: 1px solid #000; padding: 2px;">${c.short || c.label.slice(0, 4)}</th>`).join('')}
           </tr>
@@ -1959,11 +2508,11 @@ function printCircular27Report() {
         <tbody>${rowsHtml}</tbody>
       </table>
 
-      <div style="display:flex; justify-content:space-between; margin-top: 25px;">
-        <div style="text-align:center; width: 200px;">
+      <div style="display:flex; justify-content:space-between; margin-top: 20px;">
+        <div style="text-align:center; width: 180px;">
           <p style="font-weight:bold; margin:0;">${printConfig.leftSigner}</p>
         </div>
-        <div style="text-align:center; width: 250px;">
+        <div style="text-align:center; width: 220px;">
           <p style="font-style:italic; margin:0;">Ngày ..... tháng ..... năm 20...</p>
           <p style="font-weight:bold; margin: 3px 0 0 0;">${printConfig.rightSigner}</p>
           <br><br><br>
@@ -2042,25 +2591,59 @@ function exportCircular27Excel() {
   if (typeof XLSX === 'undefined' || !currentClass) return;
 
   const periodData = getPeriodAssessment();
+  const subList = getAllSubjects();
   const qList = getAllQualities();
   const cList = getAllCoreCompetencies();
   const scList = getAllSpecificCompetencies();
 
-  const headers = ['STT', 'Họ và tên', ...qList.map(q => q.label), ...cList.map(c => c.label), ...scList.map(sc => sc.label), 'Nhận xét GVCN'];
+  const subjectHeaders = [];
+  subList.forEach(sub => {
+    if (sub.hasScore) {
+      subjectHeaders.push(`${sub.label} (Mức)`, `${sub.label} (Điểm)`);
+    } else {
+      subjectHeaders.push(`${sub.label} (Mức)`);
+    }
+  });
+
+  const headers = [
+    'STT', 'Họ và tên',
+    ...subjectHeaders,
+    ...qList.map(q => `PC: ${q.label}`),
+    ...cList.map(c => `NL: ${c.label}`),
+    ...scList.map(sc => `NL: ${sc.label}`),
+    'Mức Hoàn Thành',
+    'Khen Thưởng',
+    'Lời Nhận Xét GVCN'
+  ];
+
   const rows = [
-    ['BẢNG TỔNG HỢP ĐÁNH GIÁ THÔNG TƯ 27'],
-    ['Lớp:', currentClass.name, 'GVCN:', currentClass.teacherName, 'Năm học:', currentClass.schoolYear],
+    ['BẢNG TỔNG HỢP ĐÁNH GIÁ KẾT QUẢ GIÁO DỤC THEO THÔNG TƯ 27/2020/TT-BGDĐT'],
+    ['Trường:', currentClass.schoolName, 'Lớp:', currentClass.name, 'GVCN:', currentClass.teacherName, 'Năm học:', currentClass.schoolYear],
+    ['Đợt đánh giá:', currentAssessmentPeriod],
     [],
     headers
   ];
 
   currentClass.students.forEach(s => {
     const rec = periodData[s.id] || {};
+    const subCells = [];
+    subList.forEach(sub => {
+      const subj = (rec.subjects && rec.subjects[sub.id]) || { level: 'Đ' };
+      if (sub.hasScore) {
+        subCells.push(subj.level || 'Đ', subj.score !== null && subj.score !== undefined ? subj.score : '');
+      } else {
+        subCells.push(subj.level || 'Đ');
+      }
+    });
+
     const row = [
       s.stt, s.name,
+      ...subCells,
       ...qList.map(q => rec[q.id] || 'Đ'),
       ...cList.map(c => rec[c.id] || 'Đ'),
       ...scList.map(sc => rec[sc.id] || 'Đ'),
+      rec.summaryLevel || 'Hoàn thành tốt',
+      rec.reward || 'Học sinh Tiêu biểu',
       rec.comment || ''
     ];
     rows.push(row);
@@ -2070,7 +2653,7 @@ function exportCircular27Excel() {
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'DanhGiaTT27');
   XLSX.writeFile(wb, `So_QL_HS_DanhGiaTT27_${currentClass.name}_${currentAssessmentPeriod}.xlsx`);
-  showToast('Đã xuất file Excel Đánh Giá TT27 thành công!', 'success');
+  showToast('Đã xuất file Excel Đánh Giá TT27 đầy đủ các môn thành công!', 'success');
 }
 
 function exportStudentListExcel() {
