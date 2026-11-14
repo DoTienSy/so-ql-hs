@@ -1,0 +1,214 @@
+/* Custom Styling for Sổ Quản Lý Chủ Nhiệm & Hồ Sơ Học Sinh */
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+body {
+  font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Big readable Typography */
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+/* Active navigation tab pill */
+.nav-btn {
+  color: #cbd5e1;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn.active {
+  color: #0f172a;
+  background-color: #fbbf24; /* Amber accent */
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+/* Attendance 1-touch buttons (To, rõ ràng, dễ bấm) */
+.att-btn {
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.att-btn:active {
+  transform: scale(0.95);
+}
+
+/* Trạng thái Có mặt */
+.att-btn-present {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1.5px solid #86efac;
+}
+.att-btn-present.selected {
+  background-color: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.35);
+}
+
+/* Trạng thái Vắng có phép */
+.att-btn-excused {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1.5px solid #fde68a;
+}
+.att-btn-excused.selected {
+  background-color: #d97706;
+  color: #ffffff;
+  border-color: #d97706;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35);
+}
+
+/* Trạng thái Vắng không phép */
+.att-btn-unexcused {
+  background-color: #fff1f2;
+  color: #be123c;
+  border: 1.5px solid #fecdd3;
+}
+.att-btn-unexcused.selected {
+  background-color: #e11d48;
+  color: #ffffff;
+  border-color: #e11d48;
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.35);
+}
+
+/* Trạng thái Đi muộn */
+.att-btn-late {
+  background-color: #fefce8;
+  color: #a16207;
+  border: 1.5px solid #fef08a;
+}
+.att-btn-late.selected {
+  background-color: #ca8a04;
+  color: #ffffff;
+  border-color: #ca8a04;
+  box-shadow: 0 2px 8px rgba(202, 138, 4, 0.35);
+}
+
+/* Matrix Table TT27 Cell Button */
+.matrix-cell-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+}
+
+.matrix-cell-btn:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.cell-T {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1.5px solid #86efac;
+}
+
+.cell-Đ {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1.5px solid #7dd3fc;
+}
+
+.cell-C {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1.5px solid #fcd34d;
+}
+
+/* Modal animation */
+.animate-in {
+  animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Custom Scrollbar for inner boxes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ================= PRINT STYLES ================= */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printArea, #printArea * {
+    visibility: visible;
+  }
+  #printArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5cm;
+    display: block !important;
+    background: white;
+    color: black;
+    font-size: 11pt;
+  }
+  .no-print {
+    display: none !important;
+  }
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+}
